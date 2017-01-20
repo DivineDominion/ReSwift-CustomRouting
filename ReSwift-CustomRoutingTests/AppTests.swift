@@ -8,12 +8,16 @@ class AppTests: XCTestCase {
     
     let storeDouble = nullStore()
 
+    var irrelevantRouter: Router {
+        return NullRouter()
+    }
+
     func testLaunch_DispatchesRoutingToDashboard() {
 
         var didDispatchAction: Action?
         storeDouble.dispatchFunction = { didDispatchAction = $0 }
 
-        let app = App(store: storeDouble)
+        let app = App(store: storeDouble, router: irrelevantRouter)
         app.launch()
 
         let routing = didDispatchAction as? Routing

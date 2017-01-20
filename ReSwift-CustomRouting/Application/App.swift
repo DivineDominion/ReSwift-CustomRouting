@@ -4,11 +4,20 @@ import Foundation
 
 public struct App {
 
-    let store: DefaultStore
+    /// Application-level components, mostly services.
+    struct Components {
+        let router: Router
+    }
 
-    public init(store: DefaultStore) {
+    let store: DefaultStore
+    let components: Components
+    
+    public init(
+        store: DefaultStore,
+        router: Router) {
 
         self.store = store
+        self.components = Components(router: router)
     }
 
     public func launch() {
