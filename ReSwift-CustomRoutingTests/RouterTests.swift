@@ -5,56 +5,60 @@ import XCTest
 
 class RouterTests: XCTestCase {
 
-    class RoutableDouble: Routable {
-        var didActivateIn: UINavigationController?
-        func activate(in navigationController: UINavigationController) {
-            didActivateIn = navigationController
+    class MainNavigationDouble: MainNavigation {
+        func append(routable: Routable) {
+            // no op
+        }
+
+        var didActivate: Routable?
+        func activate(routable: Routable) {
+            didActivate = routable
         }
     }
 
     var irrelevantRoutable: Routable {
-        return RoutableDouble()
+        return NullRoutable()
     }
 
     func testNewState_Nil_DoesNotActivateDashboard() {
 
-        let dashboard = RoutableDouble()
-        let navigationController = UINavigationController()
+        let dashboard = NullRoutable()
+        let mainNavigationDouble = MainNavigationDouble()
         let router = Router(
-            navigationController: navigationController,
+            mainNavigation: mainNavigationDouble,
             dashboard: dashboard)
 
         router.newState(state: nil)
 
-        XCTAssertNil(dashboard.didActivateIn)
+        XCTAssertNil(mainNavigationDouble.didActivate)
     }
 
     func testNewState_Dashboard_ActivatesDashboard() {
 
-        let dashboard = RoutableDouble()
-        let navigationController = UINavigationController()
+        let dashboard = NullRoutable()
+        let mainNavigationDouble = MainNavigationDouble()
         let router = Router(
-            navigationController: navigationController,
+            mainNavigation: mainNavigationDouble,
             dashboard: dashboard)
 
         router.newState(state: .dashboard)
 
-        XCTAssert(dashboard.didActivateIn === navigationController)
+        XCTAssert((mainNavigationDouble.didActivate as? NullRoutable) === dashboard)
     }
 
     func testNewState_TwiceToDashboard_DoesNotReactivateDashboard() {
 
-        let dashboard = RoutableDouble()
-        let navigationController = UINavigationController()
+        let dashboard = NullRoutable()
+        let mainNavigationDouble = MainNavigationDouble()
         let router = Router(
-            navigationController: navigationController,
+            mainNavigation: mainNavigationDouble,
             dashboard: dashboard)
 
         router.newState(state: .dashboard)
-        dashboard.didActivateIn = nil // Reset
+        mainNavigationDouble.didActivate = nil // Reset
         router.newState(state: .dashboard)
 
-        XCTAssertNil(dashboard.didActivateIn)
+        XCTAssertNil(mainNavigationDouble.didActivate)
     }
 
 }

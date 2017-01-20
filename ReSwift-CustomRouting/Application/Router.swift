@@ -1,26 +1,31 @@
 //  Copyright © 2017 ReSwift. All rights reserved.
 
-import Foundation
-import ReSwift
 import UIKit
+import ReSwift
 
 public protocol Routable {
 
-    func activate(in navigationController: UINavigationController)
+    var rootViewController: UIViewController { get }
+}
+
+public protocol MainNavigation {
+
+    func append(routable: Routable)
+    func activate(routable: Routable)
 }
 
 public class Router: StoreSubscriber {
 
-    let navigationController: UINavigationController
+    let mainNavigation: MainNavigation
     let dashboard: Routable
 
     var currentRoute: AppRoute?
 
     public init(
-        navigationController: UINavigationController,
+        mainNavigation: MainNavigation,
         dashboard: Routable) {
 
-        self.navigationController = navigationController
+        self.mainNavigation = mainNavigation
         self.dashboard = dashboard
     }
 
@@ -39,7 +44,7 @@ public class Router: StoreSubscriber {
 
         switch route {
         case .dashboard:
-            dashboard.activate(in: navigationController)
+            mainNavigation.activate(routable: dashboard)
         case .detail: fatalError("not implemented")
         }
     }

@@ -5,15 +5,14 @@ import UIKit
 
 public class DashboardModule: Routable {
 
-    let viewController: DashboardViewController
+    let dashboardViewController: DashboardViewController
 
-    public init(viewController: DashboardViewController = DashboardViewController()) {
-
-        self.viewController = viewController
+    public var rootViewController: UIViewController {
+        return dashboardViewController
     }
 
-    public func activate(in navigationController: UINavigationController) {
+    public init(dashboardViewController: DashboardViewController = DashboardViewController()) {
 
-        navigationController.pushViewController(viewController, animated: true)
+        self.dashboardViewController = dashboardViewController
     }
 }

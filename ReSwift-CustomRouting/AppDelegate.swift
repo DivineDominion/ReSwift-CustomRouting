@@ -10,14 +10,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        let navigationController = UINavigationController()
+        let tabBarController = UITabBarController()
 
         self.app = {
             let store = createStore()
 
+            let dashboard = DashboardModule()
+            tabBarController.append(routable: dashboard)
+
             let router = Router(
-                navigationController: navigationController,
-                dashboard: DashboardModule())
+                mainNavigation: tabBarController,
+                dashboard: dashboard)
             store.subscribe(router) { $0.route }
 
             let app = App(
@@ -28,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = {
             let window = UIWindow(frame: UIScreen.main.bounds)
-            window.rootViewController = navigationController
+            window.rootViewController = tabBarController
             window.makeKeyAndVisible()
             return window
         }()

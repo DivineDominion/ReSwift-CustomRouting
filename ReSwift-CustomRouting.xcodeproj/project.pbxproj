@@ -29,6 +29,7 @@
 		50221EC61E32584A00270B62 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EC51E32584A00270B62 /* Router.swift */; };
 		50221EC81E32590500270B62 /* DashboardModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EC71E32590500270B62 /* DashboardModule.swift */; };
 		50221ECB1E325AF600270B62 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221ECA1E325AF600270B62 /* RouterTests.swift */; };
+		50221ECD1E3266C600270B62 /* UITabBarController+MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221ECC1E3266C600270B62 /* UITabBarController+MainNavigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		50221EC51E32584A00270B62 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		50221EC71E32590500270B62 /* DashboardModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardModule.swift; sourceTree = "<group>"; };
 		50221ECA1E325AF600270B62 /* RouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
+		50221ECC1E3266C600270B62 /* UITabBarController+MainNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+MainNavigation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			children = (
 				50221EB71E3250CD00270B62 /* App.swift */,
 				50221EC51E32584A00270B62 /* Router.swift */,
+				50221ECC1E3266C600270B62 /* UITabBarController+MainNavigation.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				50221EB31E324E8400270B62 /* DashboardViewController.swift in Sources */,
 				50221EAD1E324D9400270B62 /* MainReducer.swift in Sources */,
 				50221EA61E324C4000270B62 /* AppState.swift in Sources */,
+				50221ECD1E3266C600270B62 /* UITabBarController+MainNavigation.swift in Sources */,
 				50221E7C1E324AD100270B62 /* AppDelegate.swift in Sources */,
 				50221EBB1E32512600270B62 /* Routing.swift in Sources */,
 				50221EB81E3250CD00270B62 /* App.swift in Sources */,

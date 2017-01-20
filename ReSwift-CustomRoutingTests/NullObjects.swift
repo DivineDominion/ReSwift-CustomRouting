@@ -6,22 +6,31 @@ import protocol ReSwift.Reducer
 import protocol ReSwift.Action
 import UIKit
 
+struct NullMainNavigation: MainNavigation {
+
+    func append(routable: Routable) {
+        // no op
+    }
+
+    func activate(routable: Routable) {
+        // no op
+    }
+}
+
 struct NullReducer: ReSwift.Reducer {
     func handleAction(action: Action, state: AppState?) -> AppState {
         return state ?? AppState.default
     }
 }
 
-struct NullRoutable: Routable {
-    func activate(in navigationController: UINavigationController) {
-        // no op
-    }
+class NullRoutable: Routable {
+    var rootViewController: UIViewController { return UIViewController() }
 }
 
 class NullRouter: Router {
     convenience init() {
         self.init(
-            navigationController: UINavigationController(),
+            mainNavigation: NullMainNavigation(),
             dashboard: NullRoutable())
     }
 }
