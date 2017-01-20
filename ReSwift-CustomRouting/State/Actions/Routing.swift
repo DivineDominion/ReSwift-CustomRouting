@@ -1,0 +1,19 @@
+//  Copyright © 2017 ReSwift. All rights reserved.
+
+import Foundation
+import protocol ReSwift.Action
+
+public struct Routing: Action, Equatable {
+
+    public let route: AppRoute
+
+    public init(route: AppRoute) {
+
+        self.route = route
+    }
+}
+
+public func ==(lhs: Routing, rhs: Routing) -> Bool {
+
+    return lhs.route == rhs.route
+}

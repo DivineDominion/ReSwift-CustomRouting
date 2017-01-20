@@ -7,6 +7,12 @@ public struct MainReducer: Reducer {
 
     public func handleAction(action: Action, state: AppState?) -> AppState {
 
-        return state ?? AppState.default
+        let state = state ?? AppState.default
+
+        switch action {
+        case let routing as Routing:
+            return reduceRouting(routing, state: state)
+        default: return state
+        }
     }
 }
