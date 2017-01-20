@@ -15,6 +15,11 @@
 		50221E911E324AD200270B62 /* ReSwift_CustomRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221E901E324AD200270B62 /* ReSwift_CustomRoutingTests.swift */; };
 		50221E9D1E324B6800270B62 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50221E9B1E324B6000270B62 /* ReSwift.framework */; };
 		50221E9E1E324B6800270B62 /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50221E9B1E324B6000270B62 /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		50221EA21E324C0100270B62 /* LoggingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EA11E324C0100270B62 /* LoggingMiddleware.swift */; };
+		50221EA41E324C2D00270B62 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EA31E324C2D00270B62 /* Store.swift */; };
+		50221EA61E324C4000270B62 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EA51E324C4000270B62 /* AppState.swift */; };
+		50221EA81E324CB900270B62 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EA71E324CB900270B62 /* AppRoute.swift */; };
+		50221EAD1E324D9400270B62 /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EAC1E324D9400270B62 /* MainReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		50221E901E324AD200270B62 /* ReSwift_CustomRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReSwift_CustomRoutingTests.swift; sourceTree = "<group>"; };
 		50221E921E324AD200270B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50221E9B1E324B6000270B62 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		50221EA11E324C0100270B62 /* LoggingMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingMiddleware.swift; sourceTree = "<group>"; };
+		50221EA31E324C2D00270B62 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		50221EA51E324C4000270B62 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		50221EA71E324CB900270B62 /* AppRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		50221EAC1E324D9400270B62 /* MainReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				50221E7B1E324AD100270B62 /* AppDelegate.swift */,
+				50221EA01E324BEA00270B62 /* State */,
 				50221E7D1E324AD100270B62 /* ViewController.swift */,
 				50221E7F1E324AD100270B62 /* Main.storyboard */,
 				50221E821E324AD100270B62 /* Assets.xcassets */,
@@ -113,6 +124,26 @@
 				50221E921E324AD200270B62 /* Info.plist */,
 			);
 			path = "ReSwift-CustomRoutingTests";
+			sourceTree = "<group>";
+		};
+		50221EA01E324BEA00270B62 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				50221EA31E324C2D00270B62 /* Store.swift */,
+				50221EA11E324C0100270B62 /* LoggingMiddleware.swift */,
+				50221EA51E324C4000270B62 /* AppState.swift */,
+				50221EA71E324CB900270B62 /* AppRoute.swift */,
+				50221EAB1E324D7C00270B62 /* Reducers */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		50221EAB1E324D7C00270B62 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				50221EAC1E324D9400270B62 /* MainReducer.swift */,
+			);
+			path = Reducers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50221EA21E324C0100270B62 /* LoggingMiddleware.swift in Sources */,
+				50221EAD1E324D9400270B62 /* MainReducer.swift in Sources */,
+				50221EA61E324C4000270B62 /* AppState.swift in Sources */,
 				50221E7E1E324AD100270B62 /* ViewController.swift in Sources */,
 				50221E7C1E324AD100270B62 /* AppDelegate.swift in Sources */,
+				50221EA41E324C2D00270B62 /* Store.swift in Sources */,
+				50221EA81E324CB900270B62 /* AppRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
