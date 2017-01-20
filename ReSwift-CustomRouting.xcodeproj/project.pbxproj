@@ -19,9 +19,13 @@
 		50221EAD1E324D9400270B62 /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EAC1E324D9400270B62 /* MainReducer.swift */; };
 		50221EB31E324E8400270B62 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EB11E324E8400270B62 /* DashboardViewController.swift */; };
 		50221EB41E324E8400270B62 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50221EB21E324E8400270B62 /* DashboardViewController.xib */; };
+		50221EB81E3250CD00270B62 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EB71E3250CD00270B62 /* App.swift */; };
 		50221EBB1E32512600270B62 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EBA1E32512600270B62 /* Routing.swift */; };
 		50221EBD1E32546900270B62 /* RoutingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EBC1E32546900270B62 /* RoutingReducer.swift */; };
 		50221EBF1E32549200270B62 /* RoutingReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EBE1E32549200270B62 /* RoutingReducerTests.swift */; };
+		50221EC11E32564600270B62 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EC01E32564600270B62 /* AppTests.swift */; };
+		50221EC31E32566300270B62 /* NullObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EC21E32566300270B62 /* NullObjects.swift */; };
+		50221EC41E3256DE00270B62 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50221E9B1E324B6000270B62 /* ReSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +68,12 @@
 		50221EAC1E324D9400270B62 /* MainReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
 		50221EB11E324E8400270B62 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		50221EB21E324E8400270B62 /* DashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		50221EB71E3250CD00270B62 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		50221EBA1E32512600270B62 /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		50221EBC1E32546900270B62 /* RoutingReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingReducer.swift; sourceTree = "<group>"; };
 		50221EBE1E32549200270B62 /* RoutingReducerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingReducerTests.swift; sourceTree = "<group>"; };
+		50221EC01E32564600270B62 /* AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
+		50221EC21E32566300270B62 /* NullObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50221EC41E3256DE00270B62 /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				50221E7B1E324AD100270B62 /* AppDelegate.swift */,
+				50221EB61E3250C700270B62 /* Application */,
 				50221EAE1E324E6800270B62 /* Modules */,
 				50221EA01E324BEA00270B62 /* State */,
 				50221E821E324AD100270B62 /* Assets.xcassets */,
@@ -123,8 +132,10 @@
 		50221E8F1E324AD200270B62 /* ReSwift-CustomRoutingTests */ = {
 			isa = PBXGroup;
 			children = (
-				50221E921E324AD200270B62 /* Info.plist */,
+				50221EC01E32564600270B62 /* AppTests.swift */,
 				50221EBE1E32549200270B62 /* RoutingReducerTests.swift */,
+				50221EC21E32566300270B62 /* NullObjects.swift */,
+				50221E921E324AD200270B62 /* Info.plist */,
 			);
 			path = "ReSwift-CustomRoutingTests";
 			sourceTree = "<group>";
@@ -174,6 +185,14 @@
 			children = (
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		50221EB61E3250C700270B62 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				50221EB71E3250CD00270B62 /* App.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		50221EB91E32511F00270B62 /* Actions */ = {
@@ -295,6 +314,7 @@
 				50221EA61E324C4000270B62 /* AppState.swift in Sources */,
 				50221E7C1E324AD100270B62 /* AppDelegate.swift in Sources */,
 				50221EBB1E32512600270B62 /* Routing.swift in Sources */,
+				50221EB81E3250CD00270B62 /* App.swift in Sources */,
 				50221EA41E324C2D00270B62 /* Store.swift in Sources */,
 				50221EA81E324CB900270B62 /* AppRoute.swift in Sources */,
 				50221EBD1E32546900270B62 /* RoutingReducer.swift in Sources */,
@@ -305,7 +325,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50221EC31E32566300270B62 /* NullObjects.swift in Sources */,
 				50221EBF1E32549200270B62 /* RoutingReducerTests.swift in Sources */,
+				50221EC11E32564600270B62 /* AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +484,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "ReSwift-CustomRoutingTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christiantietze.ReSwift-CustomRoutingTests";
@@ -478,6 +504,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "ReSwift-CustomRoutingTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christiantietze.ReSwift-CustomRoutingTests";

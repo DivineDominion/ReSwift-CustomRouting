@@ -8,7 +8,7 @@ class RoutingReducerTests: XCTestCase {
     func testRouting_ToDashbaord_EmptyState_SetsRouteSubstate() {
 
         let state = AppState.default
-        let action = Routing(route: .dashboard)
+        let action = Routing(to: .dashboard)
 
         let result = MainReducer().handleAction(action: action, state: state)
 
@@ -18,7 +18,7 @@ class RoutingReducerTests: XCTestCase {
     func testRouting_ToDashbaord_FromDetail_SetsRouteSubstate() {
 
         let state = AppState(route: .detail)
-        let action = Routing(route: .dashboard)
+        let action = Routing(to: .dashboard)
 
         let result = MainReducer().handleAction(action: action, state: state)
 
@@ -28,7 +28,7 @@ class RoutingReducerTests: XCTestCase {
     func testRouting_ToDetail_EmptyState_SetsRouteSubstate() {
 
         let state = AppState.default
-        let action = Routing(route: .detail)
+        let action = Routing(to: .detail)
 
         let result = MainReducer().handleAction(action: action, state: state)
 
@@ -38,7 +38,7 @@ class RoutingReducerTests: XCTestCase {
     func testRouting_ToDetail_FromDashboard_SetsRouteSubstate() {
 
         let state = AppState(route: .dashboard)
-        let action = Routing(route: .detail)
+        let action = Routing(to: .detail)
 
         let result = MainReducer().handleAction(action: action, state: state)
 
