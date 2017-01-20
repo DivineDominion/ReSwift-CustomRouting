@@ -26,6 +26,8 @@
 		50221EC11E32564600270B62 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EC01E32564600270B62 /* AppTests.swift */; };
 		50221EC31E32566300270B62 /* NullObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EC21E32566300270B62 /* NullObjects.swift */; };
 		50221EC41E3256DE00270B62 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50221E9B1E324B6000270B62 /* ReSwift.framework */; };
+		50221EC61E32584A00270B62 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EC51E32584A00270B62 /* Router.swift */; };
+		50221ECB1E325AF600270B62 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221ECA1E325AF600270B62 /* RouterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		50221EBE1E32549200270B62 /* RoutingReducerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingReducerTests.swift; sourceTree = "<group>"; };
 		50221EC01E32564600270B62 /* AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
 		50221EC21E32566300270B62 /* NullObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullObjects.swift; sourceTree = "<group>"; };
+		50221EC51E32584A00270B62 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		50221ECA1E325AF600270B62 /* RouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				50221EC01E32564600270B62 /* AppTests.swift */,
+				50221ECA1E325AF600270B62 /* RouterTests.swift */,
 				50221EBE1E32549200270B62 /* RoutingReducerTests.swift */,
 				50221EC21E32566300270B62 /* NullObjects.swift */,
 				50221E921E324AD200270B62 /* Info.plist */,
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				50221EB71E3250CD00270B62 /* App.swift */,
+				50221EC51E32584A00270B62 /* Router.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -308,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50221EC61E32584A00270B62 /* Router.swift in Sources */,
 				50221EA21E324C0100270B62 /* LoggingMiddleware.swift in Sources */,
 				50221EB31E324E8400270B62 /* DashboardViewController.swift in Sources */,
 				50221EAD1E324D9400270B62 /* MainReducer.swift in Sources */,
@@ -325,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50221ECB1E325AF600270B62 /* RouterTests.swift in Sources */,
 				50221EC31E32566300270B62 /* NullObjects.swift in Sources */,
 				50221EBF1E32549200270B62 /* RoutingReducerTests.swift in Sources */,
 				50221EC11E32564600270B62 /* AppTests.swift in Sources */,
