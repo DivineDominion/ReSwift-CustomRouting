@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		50221E7C1E324AD100270B62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221E7B1E324AD100270B62 /* AppDelegate.swift */; };
-		50221E7E1E324AD100270B62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221E7D1E324AD100270B62 /* ViewController.swift */; };
-		50221E811E324AD100270B62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50221E7F1E324AD100270B62 /* Main.storyboard */; };
 		50221E831E324AD100270B62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50221E821E324AD100270B62 /* Assets.xcassets */; };
 		50221E861E324AD100270B62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50221E841E324AD100270B62 /* LaunchScreen.storyboard */; };
-		50221E911E324AD200270B62 /* ReSwift_CustomRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221E901E324AD200270B62 /* ReSwift_CustomRoutingTests.swift */; };
 		50221E9D1E324B6800270B62 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50221E9B1E324B6000270B62 /* ReSwift.framework */; };
 		50221E9E1E324B6800270B62 /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50221E9B1E324B6000270B62 /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50221EA21E324C0100270B62 /* LoggingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EA11E324C0100270B62 /* LoggingMiddleware.swift */; };
@@ -20,6 +17,8 @@
 		50221EA61E324C4000270B62 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EA51E324C4000270B62 /* AppState.swift */; };
 		50221EA81E324CB900270B62 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EA71E324CB900270B62 /* AppRoute.swift */; };
 		50221EAD1E324D9400270B62 /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EAC1E324D9400270B62 /* MainReducer.swift */; };
+		50221EB31E324E8400270B62 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EB11E324E8400270B62 /* DashboardViewController.swift */; };
+		50221EB41E324E8400270B62 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50221EB21E324E8400270B62 /* DashboardViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +48,10 @@
 /* Begin PBXFileReference section */
 		50221E781E324AD100270B62 /* ReSwift-CustomRouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReSwift-CustomRouting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50221E7B1E324AD100270B62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50221E7D1E324AD100270B62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		50221E801E324AD100270B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50221E821E324AD100270B62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50221E851E324AD100270B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50221E871E324AD100270B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50221E8C1E324AD200270B62 /* ReSwift-CustomRoutingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReSwift-CustomRoutingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		50221E901E324AD200270B62 /* ReSwift_CustomRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReSwift_CustomRoutingTests.swift; sourceTree = "<group>"; };
 		50221E921E324AD200270B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50221E9B1E324B6000270B62 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		50221EA11E324C0100270B62 /* LoggingMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingMiddleware.swift; sourceTree = "<group>"; };
@@ -63,6 +59,8 @@
 		50221EA51E324C4000270B62 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		50221EA71E324CB900270B62 /* AppRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		50221EAC1E324D9400270B62 /* MainReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
+		50221EB11E324E8400270B62 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		50221EB21E324E8400270B62 /* DashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				50221E7B1E324AD100270B62 /* AppDelegate.swift */,
+				50221EAE1E324E6800270B62 /* Modules */,
 				50221EA01E324BEA00270B62 /* State */,
-				50221E7D1E324AD100270B62 /* ViewController.swift */,
-				50221E7F1E324AD100270B62 /* Main.storyboard */,
 				50221E821E324AD100270B62 /* Assets.xcassets */,
 				50221E841E324AD100270B62 /* LaunchScreen.storyboard */,
 				50221E871E324AD100270B62 /* Info.plist */,
@@ -120,7 +117,6 @@
 		50221E8F1E324AD200270B62 /* ReSwift-CustomRoutingTests */ = {
 			isa = PBXGroup;
 			children = (
-				50221E901E324AD200270B62 /* ReSwift_CustomRoutingTests.swift */,
 				50221E921E324AD200270B62 /* Info.plist */,
 			);
 			path = "ReSwift-CustomRoutingTests";
@@ -144,6 +140,31 @@
 				50221EAC1E324D9400270B62 /* MainReducer.swift */,
 			);
 			path = Reducers;
+			sourceTree = "<group>";
+		};
+		50221EAE1E324E6800270B62 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				50221EAF1E324E6800270B62 /* Dashboard */,
+				50221EB01E324E6800270B62 /* Detail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		50221EAF1E324E6800270B62 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				50221EB11E324E8400270B62 /* DashboardViewController.swift */,
+				50221EB21E324E8400270B62 /* DashboardViewController.xib */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		50221EB01E324E6800270B62 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +253,7 @@
 			files = (
 				50221E861E324AD100270B62 /* LaunchScreen.storyboard in Resources */,
 				50221E831E324AD100270B62 /* Assets.xcassets in Resources */,
-				50221E811E324AD100270B62 /* Main.storyboard in Resources */,
+				50221EB41E324E8400270B62 /* DashboardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,9 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				50221EA21E324C0100270B62 /* LoggingMiddleware.swift in Sources */,
+				50221EB31E324E8400270B62 /* DashboardViewController.swift in Sources */,
 				50221EAD1E324D9400270B62 /* MainReducer.swift in Sources */,
 				50221EA61E324C4000270B62 /* AppState.swift in Sources */,
-				50221E7E1E324AD100270B62 /* ViewController.swift in Sources */,
 				50221E7C1E324AD100270B62 /* AppDelegate.swift in Sources */,
 				50221EA41E324C2D00270B62 /* Store.swift in Sources */,
 				50221EA81E324CB900270B62 /* AppRoute.swift in Sources */,
@@ -264,7 +285,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50221E911E324AD200270B62 /* ReSwift_CustomRoutingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,14 +299,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		50221E7F1E324AD100270B62 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				50221E801E324AD100270B62 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		50221E841E324AD100270B62 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
