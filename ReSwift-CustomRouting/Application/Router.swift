@@ -18,15 +18,18 @@ public class Router: StoreSubscriber {
 
     let mainNavigation: MainNavigation
     let dashboard: Routable
+    let detail: Routable
 
     var currentRoute: AppRoute?
 
     public init(
         mainNavigation: MainNavigation,
-        dashboard: Routable) {
+        dashboard: Routable,
+        detail: Routable) {
 
         self.mainNavigation = mainNavigation
         self.dashboard = dashboard
+        self.detail = detail
     }
 
     public func newState(state: AppRoute?) {
@@ -42,10 +45,15 @@ public class Router: StoreSubscriber {
 
         self.currentRoute = route
 
+        let routable = self.routable(for: route)
+        mainNavigation.activate(routable: routable)
+    }
+
+    fileprivate func routable(for route: AppRoute) -> Routable {
+
         switch route {
-        case .dashboard:
-            mainNavigation.activate(routable: dashboard)
-        case .detail: fatalError("not implemented")
+        case .dashboard: return dashboard
+        case .detail: return detail
         }
     }
 }

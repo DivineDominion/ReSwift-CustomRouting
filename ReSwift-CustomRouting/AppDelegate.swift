@@ -17,10 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             let dashboard = DashboardModule()
             tabBarController.append(routable: dashboard)
+            let detail = DetailModule()
 
             let router = Router(
                 mainNavigation: tabBarController,
-                dashboard: dashboard)
+                dashboard: dashboard,
+                detail: detail)
             store.subscribe(router) { $0.route }
 
             let app = App(

@@ -31,7 +31,8 @@ class NullRouter: Router {
     convenience init() {
         self.init(
             mainNavigation: NullMainNavigation(),
-            dashboard: NullRoutable())
+            dashboard: NullRoutable(),
+            detail: NullRoutable())
     }
 }
 

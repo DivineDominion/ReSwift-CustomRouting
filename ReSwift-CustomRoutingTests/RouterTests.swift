@@ -20,13 +20,22 @@ class RouterTests: XCTestCase {
         return NullRoutable()
     }
 
-    func testNewState_Nil_DoesNotActivateDashboard() {
+    func routerComponents() -> (router: Router, dashboard: NullRoutable, detail: NullRoutable, mainNavigationDouble: MainNavigationDouble) {
 
         let dashboard = NullRoutable()
+        let detail = NullRoutable()
         let mainNavigationDouble = MainNavigationDouble()
         let router = Router(
             mainNavigation: mainNavigationDouble,
-            dashboard: dashboard)
+            dashboard: dashboard,
+            detail: detail)
+
+        return (router, dashboard, detail, mainNavigationDouble)
+    }
+
+    func testNewState_Nil_DoesNotActivateDashboard() {
+
+        let (router, _, _, mainNavigationDouble) = routerComponents()
 
         router.newState(state: nil)
 
@@ -35,11 +44,7 @@ class RouterTests: XCTestCase {
 
     func testNewState_Dashboard_ActivatesDashboard() {
 
-        let dashboard = NullRoutable()
-        let mainNavigationDouble = MainNavigationDouble()
-        let router = Router(
-            mainNavigation: mainNavigationDouble,
-            dashboard: dashboard)
+        let (router, dashboard, _, mainNavigationDouble) = routerComponents()
 
         router.newState(state: .dashboard)
 
@@ -48,11 +53,7 @@ class RouterTests: XCTestCase {
 
     func testNewState_TwiceToDashboard_DoesNotReactivateDashboard() {
 
-        let dashboard = NullRoutable()
-        let mainNavigationDouble = MainNavigationDouble()
-        let router = Router(
-            mainNavigation: mainNavigationDouble,
-            dashboard: dashboard)
+        let (router, _, _, mainNavigationDouble) = routerComponents()
 
         router.newState(state: .dashboard)
         mainNavigationDouble.didActivate = nil // Reset
@@ -60,5 +61,26 @@ class RouterTests: XCTestCase {
 
         XCTAssertNil(mainNavigationDouble.didActivate)
     }
+
+    func testNewState_Detail_ActivatesDetail() {
+
+        let (router, _, detail, mainNavigationDouble) = routerComponents()
+
+        router.newState(state: .detail)
+
+        XCTAssert((mainNavigationDouble.didActivate as? NullRoutable) === detail)
+    }
+
+    func testNewState_Detail_DoesNotReactivateDetail() {
+
+        let (router, _, _, mainNavigationDouble) = routerComponents()
+
+        router.newState(state: .detail)
+        mainNavigationDouble.didActivate = nil // Reset
+        router.newState(state: .detail)
+
+        XCTAssertNil(mainNavigationDouble.didActivate)
+    }
+
 
 }

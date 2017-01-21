@@ -30,6 +30,9 @@
 		50221EC81E32590500270B62 /* DashboardModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221EC71E32590500270B62 /* DashboardModule.swift */; };
 		50221ECB1E325AF600270B62 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221ECA1E325AF600270B62 /* RouterTests.swift */; };
 		50221ECD1E3266C600270B62 /* UITabBarController+MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221ECC1E3266C600270B62 /* UITabBarController+MainNavigation.swift */; };
+		50221ECF1E32671E00270B62 /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221ECE1E32671E00270B62 /* DetailModule.swift */; };
+		50221ED21E32675800270B62 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221ED11E32675800270B62 /* DetailViewController.swift */; };
+		50221ED41E3267A600270B62 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50221ED31E3267A600270B62 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		50221EC71E32590500270B62 /* DashboardModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardModule.swift; sourceTree = "<group>"; };
 		50221ECA1E325AF600270B62 /* RouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		50221ECC1E3266C600270B62 /* UITabBarController+MainNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+MainNavigation.swift"; sourceTree = "<group>"; };
+		50221ECE1E32671E00270B62 /* DetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
+		50221ED11E32675800270B62 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		50221ED31E3267A600270B62 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +198,8 @@
 		50221EB01E324E6800270B62 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				50221ECE1E32671E00270B62 /* DetailModule.swift */,
+				50221ED01E32674E00270B62 /* UI */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -219,6 +227,15 @@
 			children = (
 				50221EB11E324E8400270B62 /* DashboardViewController.swift */,
 				50221EB21E324E8400270B62 /* DashboardViewController.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		50221ED01E32674E00270B62 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				50221ED11E32675800270B62 /* DetailViewController.swift */,
+				50221ED31E3267A600270B62 /* DetailViewController.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -311,6 +328,7 @@
 				50221E861E324AD100270B62 /* LaunchScreen.storyboard in Resources */,
 				50221E831E324AD100270B62 /* Assets.xcassets in Resources */,
 				50221EB41E324E8400270B62 /* DashboardViewController.xib in Resources */,
+				50221ED41E3267A600270B62 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +356,9 @@
 				50221E7C1E324AD100270B62 /* AppDelegate.swift in Sources */,
 				50221EBB1E32512600270B62 /* Routing.swift in Sources */,
 				50221EB81E3250CD00270B62 /* App.swift in Sources */,
+				50221ECF1E32671E00270B62 /* DetailModule.swift in Sources */,
 				50221EA41E324C2D00270B62 /* Store.swift in Sources */,
+				50221ED21E32675800270B62 /* DetailViewController.swift in Sources */,
 				50221EA81E324CB900270B62 /* AppRoute.swift in Sources */,
 				50221EBD1E32546900270B62 /* RoutingReducer.swift in Sources */,
 			);
