@@ -132,13 +132,11 @@
 		50221E7A1E324AD100270B62 /* ReSwift-CustomRouting */ = {
 			isa = PBXGroup;
 			children = (
-				50221E7B1E324AD100270B62 /* AppDelegate.swift */,
+				50FA213C1E35E50500A8FD9C /* Infrastructure */,
 				50221EB61E3250C700270B62 /* Application */,
 				50221EAE1E324E6800270B62 /* Modules */,
 				50221EA01E324BEA00270B62 /* State */,
-				50221E821E324AD100270B62 /* Assets.xcassets */,
-				50221E841E324AD100270B62 /* LaunchScreen.storyboard */,
-				50221E871E324AD100270B62 /* Info.plist */,
+				50FA213D1E35E51300A8FD9C /* Misc */,
 			);
 			path = "ReSwift-CustomRouting";
 			sourceTree = "<group>";
@@ -238,6 +236,24 @@
 				50221ED31E3267A600270B62 /* DetailViewController.xib */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		50FA213C1E35E50500A8FD9C /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				50221E7B1E324AD100270B62 /* AppDelegate.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		50FA213D1E35E51300A8FD9C /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				50221E821E324AD100270B62 /* Assets.xcassets */,
+				50221E841E324AD100270B62 /* LaunchScreen.storyboard */,
+				50221E871E324AD100270B62 /* Info.plist */,
+			);
+			name = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -580,6 +596,7 @@
 				50221E971E324AD200270B62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50221E981E324AD200270B62 /* Build configuration list for PBXNativeTarget "ReSwift-CustomRoutingTests" */ = {
 			isa = XCConfigurationList;
@@ -588,6 +605,7 @@
 				50221E9A1E324AD200270B62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
