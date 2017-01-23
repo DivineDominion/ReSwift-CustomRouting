@@ -26,4 +26,9 @@ public struct RouterConfiguration {
         case .detail: return detail
         }
     }
+
+    public func configure(mainNavigation: MainNavigation) {
+
+        mainNavigation.configure(routables: self.routables)
+    }
 }

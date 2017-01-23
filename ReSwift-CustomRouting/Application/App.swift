@@ -11,7 +11,7 @@ public struct App {
 
     let store: DefaultStore
     let components: Components
-    
+
     public init(
         store: DefaultStore,
         router: Router) {
