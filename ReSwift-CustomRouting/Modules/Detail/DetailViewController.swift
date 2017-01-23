@@ -4,10 +4,15 @@ import UIKit
 
 public class DetailViewController: UIViewController {
 
-    override public func viewDidLoad() {
+    convenience init() {
 
-        super.viewDidLoad()
+        self.init(nibName: nil, bundle: nil)
 
         self.title = "Detail"
+    }
+
+    public override func viewDidLoad() {
+
+        super.viewDidLoad()
     }
 }
