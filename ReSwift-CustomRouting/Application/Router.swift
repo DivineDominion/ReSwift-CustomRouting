@@ -17,19 +17,16 @@ public protocol MainNavigation {
 public class Router: StoreSubscriber {
 
     let mainNavigation: MainNavigation
-    let dashboard: Routable
-    let detail: Routable
+    let configuration: RouterConfiguration
 
     var currentRoute: AppRoute?
 
     public init(
         mainNavigation: MainNavigation,
-        dashboard: Routable,
-        detail: Routable) {
+        configuration: RouterConfiguration) {
 
         self.mainNavigation = mainNavigation
-        self.dashboard = dashboard
-        self.detail = detail
+        self.configuration = configuration
     }
 
     public func newState(state: AppRoute?) {
@@ -45,15 +42,7 @@ public class Router: StoreSubscriber {
 
         self.currentRoute = route
 
-        let routable = self.routable(for: route)
+        let routable = configuration.routable(for: route)
         mainNavigation.activate(routable: routable)
-    }
-
-    fileprivate func routable(for route: AppRoute) -> Routable {
-
-        switch route {
-        case .dashboard: return dashboard
-        case .detail: return detail
-        }
     }
 }

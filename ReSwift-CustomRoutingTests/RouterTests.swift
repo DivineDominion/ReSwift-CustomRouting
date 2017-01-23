@@ -25,10 +25,10 @@ class RouterTests: XCTestCase {
         let dashboard = NullRoutable()
         let detail = NullRoutable()
         let mainNavigationDouble = MainNavigationDouble()
+        let routerConfiguration = RouterConfiguration(dashboard: dashboard, detail: detail)
         let router = Router(
             mainNavigation: mainNavigationDouble,
-            dashboard: dashboard,
-            detail: detail)
+            configuration: routerConfiguration)
 
         return (router, dashboard, detail, mainNavigationDouble)
     }

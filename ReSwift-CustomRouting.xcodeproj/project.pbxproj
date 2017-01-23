@@ -40,6 +40,7 @@
 		50FA21471E35E8B500A8FD9C /* DetailNavigationPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA21461E35E8B500A8FD9C /* DetailNavigationPresenterTests.swift */; };
 		50FA214A1E35EA7C00A8FD9C /* DetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA21491E35EA7C00A8FD9C /* DetailState.swift */; };
 		50FA214E1E35EB7F00A8FD9C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA214D1E35EB7F00A8FD9C /* Deck.swift */; };
+		50FA21501E3601A700A8FD9C /* RouterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA214F1E3601A700A8FD9C /* RouterConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		50FA21461E35E8B500A8FD9C /* DetailNavigationPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailNavigationPresenterTests.swift; sourceTree = "<group>"; };
 		50FA21491E35EA7C00A8FD9C /* DetailState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailState.swift; sourceTree = "<group>"; };
 		50FA214D1E35EB7F00A8FD9C /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		50FA214F1E3601A700A8FD9C /* RouterConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 			children = (
 				50221EB71E3250CD00270B62 /* App.swift */,
 				50221EC51E32584A00270B62 /* Router.swift */,
+				50FA214F1E3601A700A8FD9C /* RouterConfiguration.swift */,
 				50221ECC1E3266C600270B62 /* UITabBarController+MainNavigation.swift */,
 			);
 			path = Application;
@@ -432,6 +435,7 @@
 				50221EA41E324C2D00270B62 /* Store.swift in Sources */,
 				50221ED21E32675800270B62 /* DetailViewController.swift in Sources */,
 				50221EA81E324CB900270B62 /* AppRoute.swift in Sources */,
+				50FA21501E3601A700A8FD9C /* RouterConfiguration.swift in Sources */,
 				50221EBD1E32546900270B62 /* RoutingReducer.swift in Sources */,
 				50FA213B1E35E4B300A8FD9C /* DetailViewModel.swift in Sources */,
 			);
