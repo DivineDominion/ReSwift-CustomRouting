@@ -34,8 +34,10 @@
 		50221ED21E32675800270B62 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221ED11E32675800270B62 /* DetailViewController.swift */; };
 		50221ED41E3267A600270B62 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50221ED31E3267A600270B62 /* DetailViewController.xib */; };
 		50FA213B1E35E4B300A8FD9C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA213A1E35E4B300A8FD9C /* DetailViewModel.swift */; };
+		50FA21401E35E56A00A8FD9C /* DetailNavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA213F1E35E56A00A8FD9C /* DetailNavigationPresenter.swift */; };
 		50FA21421E35E65700A8FD9C /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA21411E35E65700A8FD9C /* DetailViewControllerTests.swift */; };
 		50FA21441E35E72400A8FD9C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA21431E35E72400A8FD9C /* Helpers.swift */; };
+		50FA21471E35E8B500A8FD9C /* DetailNavigationPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA21461E35E8B500A8FD9C /* DetailNavigationPresenterTests.swift */; };
 		50FA214A1E35EA7C00A8FD9C /* DetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA21491E35EA7C00A8FD9C /* DetailState.swift */; };
 		50FA214E1E35EB7F00A8FD9C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA214D1E35EB7F00A8FD9C /* Deck.swift */; };
 /* End PBXBuildFile section */
@@ -94,8 +96,10 @@
 		50221ED11E32675800270B62 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		50221ED31E3267A600270B62 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		50FA213A1E35E4B300A8FD9C /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		50FA213F1E35E56A00A8FD9C /* DetailNavigationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailNavigationPresenter.swift; sourceTree = "<group>"; };
 		50FA21411E35E65700A8FD9C /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
 		50FA21431E35E72400A8FD9C /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		50FA21461E35E8B500A8FD9C /* DetailNavigationPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailNavigationPresenterTests.swift; sourceTree = "<group>"; };
 		50FA21491E35EA7C00A8FD9C /* DetailState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailState.swift; sourceTree = "<group>"; };
 		50FA214D1E35EB7F00A8FD9C /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				50221EC01E32564600270B62 /* AppTests.swift */,
+				50FA21461E35E8B500A8FD9C /* DetailNavigationPresenterTests.swift */,
 				50FA21411E35E65700A8FD9C /* DetailViewControllerTests.swift */,
 				50221ECA1E325AF600270B62 /* RouterTests.swift */,
 				50221EBE1E32549200270B62 /* RoutingReducerTests.swift */,
@@ -271,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				50FA213A1E35E4B300A8FD9C /* DetailViewModel.swift */,
+				50FA213F1E35E56A00A8FD9C /* DetailNavigationPresenter.swift */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 				50221EAD1E324D9400270B62 /* MainReducer.swift in Sources */,
 				50221EA61E324C4000270B62 /* AppState.swift in Sources */,
 				50221ECD1E3266C600270B62 /* UITabBarController+MainNavigation.swift in Sources */,
+				50FA21401E35E56A00A8FD9C /* DetailNavigationPresenter.swift in Sources */,
 				50221E7C1E324AD100270B62 /* AppDelegate.swift in Sources */,
 				50221EBB1E32512600270B62 /* Routing.swift in Sources */,
 				50221EB81E3250CD00270B62 /* App.swift in Sources */,
@@ -437,6 +444,7 @@
 				50221ECB1E325AF600270B62 /* RouterTests.swift in Sources */,
 				50FA21441E35E72400A8FD9C /* Helpers.swift in Sources */,
 				50FA21421E35E65700A8FD9C /* DetailViewControllerTests.swift in Sources */,
+				50FA21471E35E8B500A8FD9C /* DetailNavigationPresenterTests.swift in Sources */,
 				50221EC31E32566300270B62 /* NullObjects.swift in Sources */,
 				50221EBF1E32549200270B62 /* RoutingReducerTests.swift in Sources */,
 				50221EC11E32564600270B62 /* AppTests.swift in Sources */,

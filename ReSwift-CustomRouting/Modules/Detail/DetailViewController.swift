@@ -21,7 +21,7 @@ public class DetailViewController: UIViewController {
     }
 }
 
-extension DetailViewController {
+extension DetailViewController: DisplaysDetailViewModel {
 
     public func display(detailViewModel: DetailViewModel) {
 
