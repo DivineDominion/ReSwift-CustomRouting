@@ -25,6 +25,7 @@ struct NullReducer: ReSwift.Reducer {
 
 class NullRoutable: Routable {
     var rootViewController: UIViewController { return UIViewController() }
+    var route: AppRoute { return .dashboard }
 }
 
 class NullRouter: Router {

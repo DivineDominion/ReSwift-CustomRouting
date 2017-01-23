@@ -11,6 +11,10 @@ public class DashboardModule: Routable {
         return dashboardViewController
     }
 
+    public var route: AppRoute {
+        return .dashboard
+    }
+    
     public init(dashboardViewController: DashboardViewController = DashboardViewController()) {
 
         self.dashboardViewController = dashboardViewController

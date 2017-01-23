@@ -6,6 +6,7 @@ import ReSwift
 public protocol Routable {
 
     var rootViewController: UIViewController { get }
+    var route: AppRoute { get }
 }
 
 public protocol MainNavigation {
