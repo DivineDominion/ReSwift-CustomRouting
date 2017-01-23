@@ -16,6 +16,10 @@ class RouterTests: XCTestCase {
         return NullRoutable()
     }
 
+    var irrelevantDetailState: DetailState {
+        return DetailState(deck: Deck(previous: 0, current: 1, next: 2))
+    }
+    
     func routerComponents() -> (router: Router, dashboard: NullRoutable, detail: NullRoutable, mainNavigationDouble: MainNavigationDouble) {
 
         let dashboard = NullRoutable()
@@ -62,7 +66,7 @@ class RouterTests: XCTestCase {
 
         let (router, _, detail, mainNavigationDouble) = routerComponents()
 
-        router.newState(state: .detail)
+        router.newState(state: .detail(irrelevantDetailState))
 
         XCTAssert((mainNavigationDouble.didActivate as? NullRoutable) === detail)
     }
@@ -71,9 +75,9 @@ class RouterTests: XCTestCase {
 
         let (router, _, _, mainNavigationDouble) = routerComponents()
 
-        router.newState(state: .detail)
+        router.newState(state: .detail(irrelevantDetailState))
         mainNavigationDouble.didActivate = nil // Reset
-        router.newState(state: .detail)
+        router.newState(state: .detail(irrelevantDetailState))
 
         XCTAssertNil(mainNavigationDouble.didActivate)
     }

@@ -36,6 +36,7 @@
 		50FA213B1E35E4B300A8FD9C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA213A1E35E4B300A8FD9C /* DetailViewModel.swift */; };
 		50FA21421E35E65700A8FD9C /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA21411E35E65700A8FD9C /* DetailViewControllerTests.swift */; };
 		50FA21441E35E72400A8FD9C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA21431E35E72400A8FD9C /* Helpers.swift */; };
+		50FA214A1E35EA7C00A8FD9C /* DetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA21491E35EA7C00A8FD9C /* DetailState.swift */; };
 		50FA214E1E35EB7F00A8FD9C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA214D1E35EB7F00A8FD9C /* Deck.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		50FA213A1E35E4B300A8FD9C /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		50FA21411E35E65700A8FD9C /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
 		50FA21431E35E72400A8FD9C /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		50FA21491E35EA7C00A8FD9C /* DetailState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailState.swift; sourceTree = "<group>"; };
 		50FA214D1E35EB7F00A8FD9C /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,8 +169,7 @@
 			children = (
 				50221EA31E324C2D00270B62 /* Store.swift */,
 				50221EA11E324C0100270B62 /* LoggingMiddleware.swift */,
-				50221EA51E324C4000270B62 /* AppState.swift */,
-				50221EA71E324CB900270B62 /* AppRoute.swift */,
+				50FA21481E35EA6B00A8FD9C /* States */,
 				50221EB91E32511F00270B62 /* Actions */,
 				50221EAB1E324D7C00270B62 /* Reducers */,
 			);
@@ -282,6 +283,16 @@
 				50221E921E324AD200270B62 /* Info.plist */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		50FA21481E35EA6B00A8FD9C /* States */ = {
+			isa = PBXGroup;
+			children = (
+				50221EA71E324CB900270B62 /* AppRoute.swift */,
+				50221EA51E324C4000270B62 /* AppState.swift */,
+				50FA21491E35EA7C00A8FD9C /* DetailState.swift */,
+			);
+			path = States;
 			sourceTree = "<group>";
 		};
 		50FA214C1E35EB7900A8FD9C /* Model */ = {
@@ -410,6 +421,7 @@
 				50221EB81E3250CD00270B62 /* App.swift in Sources */,
 				50FA214E1E35EB7F00A8FD9C /* Deck.swift in Sources */,
 				50221ECF1E32671E00270B62 /* DetailModule.swift in Sources */,
+				50FA214A1E35EA7C00A8FD9C /* DetailState.swift in Sources */,
 				50221EA41E324C2D00270B62 /* Store.swift in Sources */,
 				50221ED21E32675800270B62 /* DetailViewController.swift in Sources */,
 				50221EA81E324CB900270B62 /* AppRoute.swift in Sources */,

@@ -6,15 +6,19 @@ import protocol ReSwift.StateType
 public enum AppRoute: StateType, Equatable {
 
     case dashboard
-    case detail
+    case detail(DetailState)
 }
 
 public func ==(lhs: AppRoute, rhs: AppRoute) -> Bool {
 
     switch (lhs, rhs) {
-    case (.detail, .detail),
-         (.dashboard, .dashboard):
+    case (.dashboard, .dashboard):
         return true
+
+    case let (.detail(lDetail),
+              .detail(rDetail)):
+        return lDetail == rDetail
+
     default: return false
     }
 }
