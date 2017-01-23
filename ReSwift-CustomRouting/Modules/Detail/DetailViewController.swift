@@ -4,6 +4,10 @@ import UIKit
 
 public class DetailViewController: UIViewController {
 
+    @IBOutlet weak var currentLabel: UILabel!
+    @IBOutlet weak var previousButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
     convenience init() {
 
         self.init(nibName: nil, bundle: nil)

@@ -6,12 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="ReSwift_CustomRouting" customModuleProvider="target">
             <connections>
+                <outlet property="currentLabel" destination="YQP-Hg-nfA" id="KGi-XE-s2n"/>
+                <outlet property="nextButton" destination="aNf-4c-ccA" id="o4l-zm-NSx"/>
+                <outlet property="previousButton" destination="O2d-vV-Iqz" id="nvZ-Xg-afg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="YYb-ZB-CTO"/>
             </connections>
         </placeholder>
@@ -20,17 +22,29 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EI-tt-4mU">
-                    <rect key="frame" x="164" y="256.5" width="47" height="21"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2d-vV-Iqz">
+                    <rect key="frame" x="16" y="20" width="31" height="30"/>
+                    <state key="normal" title="Prev"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNf-4c-ccA">
+                    <rect key="frame" x="327" y="20" width="32" height="30"/>
+                    <state key="normal" title="Next"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQP-Hg-nfA">
+                    <rect key="frame" x="158" y="24" width="58.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.96078431610000004" green="0.70588237050000002" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="1EI-tt-4mU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.8" id="3ew-8f-eZi"/>
-                <constraint firstItem="1EI-tt-4mU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FEL-h5-ixa"/>
+                <constraint firstAttribute="trailing" secondItem="aNf-4c-ccA" secondAttribute="trailing" constant="16" id="3jI-D0-4rV"/>
+                <constraint firstItem="O2d-vV-Iqz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="ER3-rF-v6R"/>
+                <constraint firstItem="YQP-Hg-nfA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OeO-Wi-KVp"/>
+                <constraint firstItem="O2d-vV-Iqz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="XbJ-m7-Aco"/>
+                <constraint firstItem="aNf-4c-ccA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="ZH2-Kf-lqi"/>
+                <constraint firstItem="YQP-Hg-nfA" firstAttribute="baseline" secondItem="O2d-vV-Iqz" secondAttribute="baseline" id="wrc-fI-dvS"/>
             </constraints>
         </view>
     </objects>
