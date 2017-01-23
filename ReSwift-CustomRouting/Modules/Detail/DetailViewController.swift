@@ -20,3 +20,13 @@ public class DetailViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+
+extension DetailViewController {
+
+    public func display(detailViewModel: DetailViewModel) {
+
+        currentLabel.text = detailViewModel.current
+        previousButton.titleLabel?.text = detailViewModel.previous
+        nextButton.titleLabel?.text = detailViewModel.next
+    }
+}

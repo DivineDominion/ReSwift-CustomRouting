@@ -33,6 +33,9 @@
 		50221ECF1E32671E00270B62 /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221ECE1E32671E00270B62 /* DetailModule.swift */; };
 		50221ED21E32675800270B62 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50221ED11E32675800270B62 /* DetailViewController.swift */; };
 		50221ED41E3267A600270B62 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50221ED31E3267A600270B62 /* DetailViewController.xib */; };
+		50FA213B1E35E4B300A8FD9C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA213A1E35E4B300A8FD9C /* DetailViewModel.swift */; };
+		50FA21421E35E65700A8FD9C /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA21411E35E65700A8FD9C /* DetailViewControllerTests.swift */; };
+		50FA21441E35E72400A8FD9C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA21431E35E72400A8FD9C /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,9 @@
 		50221ECE1E32671E00270B62 /* DetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
 		50221ED11E32675800270B62 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		50221ED31E3267A600270B62 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		50FA213A1E35E4B300A8FD9C /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		50FA21411E35E65700A8FD9C /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
+		50FA21431E35E72400A8FD9C /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,10 +151,10 @@
 			isa = PBXGroup;
 			children = (
 				50221EC01E32564600270B62 /* AppTests.swift */,
+				50FA21411E35E65700A8FD9C /* DetailViewControllerTests.swift */,
 				50221ECA1E325AF600270B62 /* RouterTests.swift */,
 				50221EBE1E32549200270B62 /* RoutingReducerTests.swift */,
-				50221EC21E32566300270B62 /* NullObjects.swift */,
-				50221E921E324AD200270B62 /* Info.plist */,
+				50FA21451E35E72900A8FD9C /* Util */,
 			);
 			path = "ReSwift-CustomRoutingTests";
 			sourceTree = "<group>";
@@ -197,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				50221ECE1E32671E00270B62 /* DetailModule.swift */,
+				50FA213E1E35E53E00A8FD9C /* Control */,
 				50221ED01E32674E00270B62 /* UI */,
 			);
 			path = Detail;
@@ -254,6 +261,24 @@
 				50221E871E324AD100270B62 /* Info.plist */,
 			);
 			name = Misc;
+			sourceTree = "<group>";
+		};
+		50FA213E1E35E53E00A8FD9C /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				50FA213A1E35E4B300A8FD9C /* DetailViewModel.swift */,
+			);
+			name = Control;
+			sourceTree = "<group>";
+		};
+		50FA21451E35E72900A8FD9C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				50FA21431E35E72400A8FD9C /* Helpers.swift */,
+				50221EC21E32566300270B62 /* NullObjects.swift */,
+				50221E921E324AD200270B62 /* Info.plist */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +402,7 @@
 				50221ED21E32675800270B62 /* DetailViewController.swift in Sources */,
 				50221EA81E324CB900270B62 /* AppRoute.swift in Sources */,
 				50221EBD1E32546900270B62 /* RoutingReducer.swift in Sources */,
+				50FA213B1E35E4B300A8FD9C /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +411,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				50221ECB1E325AF600270B62 /* RouterTests.swift in Sources */,
+				50FA21441E35E72400A8FD9C /* Helpers.swift in Sources */,
+				50FA21421E35E65700A8FD9C /* DetailViewControllerTests.swift in Sources */,
 				50221EC31E32566300270B62 /* NullObjects.swift in Sources */,
 				50221EBF1E32549200270B62 /* RoutingReducerTests.swift in Sources */,
 				50221EC11E32564600270B62 /* AppTests.swift in Sources */,
