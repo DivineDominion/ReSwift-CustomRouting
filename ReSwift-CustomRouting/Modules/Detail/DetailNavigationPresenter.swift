@@ -20,9 +20,12 @@ public class DetailNavigationPresenter: StoreSubscriber {
 
     fileprivate var lastState: DetailState?
 
-    public func newState(state: DetailState) {
+    public func newState(state: DetailState?) {
 
-        guard state != lastState else { return }
+        guard let state = state,
+            state != lastState
+            else { return }
+        
         lastState = state
 
         let viewModel = DetailViewModel(deck: state.deck)
