@@ -4,13 +4,10 @@ import UIKit
 
 extension UITabBarController: MainNavigation {
 
-    public func append(routable: Routable) {
+    public func configure(routables: [Routable]) {
 
-        var viewControllers = self.viewControllers ?? []
-
-        viewControllers.append(routable.rootViewController)
-
-        self.viewControllers = viewControllers
+        self.viewControllers = routables
+            .map { $0.rootViewController }
     }
 
     public func activate(routable: Routable) {

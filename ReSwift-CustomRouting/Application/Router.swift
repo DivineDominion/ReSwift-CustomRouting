@@ -10,7 +10,7 @@ public protocol Routable {
 
 public protocol MainNavigation {
 
-    func append(routable: Routable)
+    func configure(routables: [Routable])
     func activate(routable: Routable)
 }
 

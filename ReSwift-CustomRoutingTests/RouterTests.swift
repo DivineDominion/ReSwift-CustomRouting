@@ -5,13 +5,9 @@ import XCTest
 
 class RouterTests: XCTestCase {
 
-    class MainNavigationDouble: MainNavigation {
-        func append(routable: Routable) {
-            // no op
-        }
-
+    class MainNavigationDouble: NullMainNavigation {
         var didActivate: Routable?
-        func activate(routable: Routable) {
+        override func activate(routable: Routable) {
             didActivate = routable
         }
     }

@@ -6,9 +6,9 @@ import protocol ReSwift.Reducer
 import protocol ReSwift.Action
 import UIKit
 
-struct NullMainNavigation: MainNavigation {
+class NullMainNavigation: MainNavigation {
 
-    func append(routable: Routable) {
+    func configure(routables: [Routable]) {
         // no op
     }
 

@@ -16,8 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let store = createStore()
 
             let dashboard = DashboardModule()
-            tabBarController.append(routable: dashboard)
             let detail = DetailModule()
+
+            tabBarController.configure(routables: [dashboard, detail])
 
             let router = Router(
                 mainNavigation: tabBarController,
